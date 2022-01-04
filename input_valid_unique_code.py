@@ -17,11 +17,15 @@ browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 # Get page
 browser.get("http://cv-gen-dipl.herokuapp.com:80")
 
-# Extract title from page and print
-title = browser.title
-print(f"{title}")
 browser.find_element_by_id("input-unique-code").send_keys("W6FK-ZRM5-H20C")
 browser.find_element_by_id("edit-cv").click()
+
+time.sleep(5)
+if browser.title == 'Edit Data':
+    print('test success')
+else:
+    print('test failed')
+
 #Wait for 10 seconds
 time.sleep(10)
 browser.quit()
