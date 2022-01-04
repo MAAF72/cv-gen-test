@@ -40,6 +40,12 @@ browser.find_element_by_id("deskripsi").clear()
 browser.find_element_by_id("deskripsi").send_keys("Tester")
 browser.find_element_by_id("btn-choose-template").click()
 
+time.sleep(5)
+if browser.title == 'Choose Template':
+    print('test success')
+else:
+    print('test failed')
+
 #Wait for 10 seconds
 time.sleep(10)
 browser.quit()
