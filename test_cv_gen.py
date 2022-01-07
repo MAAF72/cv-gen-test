@@ -1,0 +1,3 @@
+from test_tc01_input_data import test_tc01_input_data
+from test_tc02_invalid_image_format import test_tc02_invalid_image_format
+from test_tc03_invalid_image_size import test_tc03_invalid_image_size
