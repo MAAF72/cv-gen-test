@@ -37,5 +37,5 @@ def test_template_2_successfuly_rendered():
     wait.until(EC.alert_is_present())
     browser.switch_to.alert.accept()
 
-    assert browser.find_element_by_xpath('//*[@id="cv-preview-section"]/embed'), 'CV template is not rendered'
+    assert browser.find_element(By.XPATH, '//*[@id="cv-preview-section"]/embed'), 'CV template is not rendered'
     browser.quit()
