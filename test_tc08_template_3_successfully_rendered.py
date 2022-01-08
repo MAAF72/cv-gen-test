@@ -20,9 +20,6 @@ def test_template_3_successfuly_rendered():
     # Get page
     browser.get("http://cv-gen-dipl.herokuapp.com:80")
 
-    # Extract title from page and print
-    title = browser.title
-
     # insert unique code
     browser.find_element(By.ID, "input-unique-code").send_keys("W6FK-ZRM5-H20C")
     browser.find_element(By.ID, "edit-cv").click()
