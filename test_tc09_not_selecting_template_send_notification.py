@@ -39,10 +39,12 @@ browser.find_element_by_id("get-cv").click()
 
 wait.until(EC.alert_is_present())
 
-if browser.switch_to.alert.text == 'Please select template first':
-    print('test success')
-else:
-    print('test failed')
+assert browser.switch_to.alert.text == 'Please select template first'
+
+# if browser.switch_to.alert.text == 'Please select template first':
+#     print('test success')
+# else:
+#     print('test failed')
 
 #Wait for 10 seconds
 time.sleep(10)
