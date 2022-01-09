@@ -62,6 +62,7 @@ def test_tc01_input_data():
         browser.switch_to.alert
 
     fill('#form-customer #nama', 'John Doe')
+    fill('#form-customer #email', 'john.doe@github.com')
     fill('#form-customer #no_hp', '085335831111')
     fill('#form-customer #portfolio', 'john-doe.github.io')
     fill('#form-customer #job', 'Quality Assurance')
