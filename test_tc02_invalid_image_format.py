@@ -28,7 +28,7 @@ def browser_select(browser, selector, value):
     return obj
 
 def test_tc02_invalid_image_format():
-    PHOTO_PATH = f'{os.getcwd()}/resources/edgelist-adlist.cpp'
+    PHOTO_PATH = os.path.join(os.getcwd(), 'resources', 'edgelist-adlist.cpp')
 
     ## Setup chrome options
     chrome_options = Options()
@@ -37,7 +37,7 @@ def test_tc02_invalid_image_format():
     chrome_options.add_argument('--disable-gpu')
 
     # Set path to chromedriver as per your configuration
-    webdriver_service = Service("/snap/bin/chromium.chromedriver")
+    webdriver_service = Service(os.getenv("CHROME_DRIVER_PATH"))
 
     # Choose Chrome Browser
     browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)

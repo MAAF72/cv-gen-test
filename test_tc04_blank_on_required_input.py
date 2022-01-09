@@ -28,7 +28,7 @@ def browser_select(browser, selector, value):
     return obj
 
 def test_tc04_blank_on_required_input():
-    PHOTO_PATH = f'{os.getcwd()}/resources/photo.png'
+    PHOTO_PATH = os.path.join(os.getcwd(), 'resources', 'photo.png')
 
     ## Setup chrome options
     chrome_options = Options()
@@ -37,7 +37,7 @@ def test_tc04_blank_on_required_input():
     chrome_options.add_argument('--disable-gpu')
 
     # Set path to chromedriver as per your configuration
-    webdriver_service = Service("/snap/bin/chromium.chromedriver")
+    webdriver_service = Service(os.getenv("CHROME_DRIVER_PATH"))
 
     # Choose Chrome Browser
     browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)

@@ -1,5 +1,8 @@
+from dotenv import load_dotenv
 from test_tc01_input_data import test_tc01_input_data
 from test_tc02_invalid_image_format import test_tc02_invalid_image_format
 from test_tc03_invalid_image_size import test_tc03_invalid_image_size
 from test_tc04_blank_on_required_input import test_tc04_blank_on_required_input
 from test_tc05_insert_mandatory_data import test_tc05_insert_mandatory_data
+
+load_dotenv()
