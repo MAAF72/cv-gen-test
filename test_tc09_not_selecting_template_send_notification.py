@@ -1,4 +1,6 @@
 import time
+import os
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -6,12 +8,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
+load_dotenv()
 def test_not_selecting_template():
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')
 
     # Set path to chromedriver as per your configuration
-    webdriver_service = Service("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe")
+    webdriver_service = Service(os.getenv("CHROMEDRIVER"))
     browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
     # Wait for initialize, in seconds
