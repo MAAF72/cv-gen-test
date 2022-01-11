@@ -18,7 +18,7 @@ def test_not_selecting_template():
     browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
     # Wait for initialize, in seconds
-    wait = WebDriverWait(browser, 10)
+    wait = WebDriverWait(browser, 30)
 
     # Get page
     browser.get("http://cv-gen-dipl.herokuapp.com:80")
