@@ -14,7 +14,7 @@ def test_not_selecting_template():
     chrome_options.add_argument('--no-sandbox')
 
     # Set path to chromedriver as per your configuration
-    webdriver_service = Service(os.getenv("CHROMEDRIVER"))
+    webdriver_service = Service(os.getenv("CHROME_DRIVER_PATH"))
     browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
     # Wait for initialize, in seconds
