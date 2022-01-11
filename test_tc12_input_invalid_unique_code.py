@@ -21,4 +21,9 @@ def test_input_invalid_code():
 
     browser.find_element(By.ID, "input-unique-code").send_keys("W6FK-ZRM5-XXXX")
     browser.find_element(By.ID, "edit-cv").click()
+
+    WebDriverWait(browser, 10).until(EC.title_is('404 Not Found'))
+
+    assert browser.title == "404 Not Found"
+
     browser.quit()
